@@ -30,18 +30,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="well top-buffer col-xs-8 col-xs-offset-2">
-          <div class="col-xs-10 col-xs-offset-1">
+        <div class="well top-buffer col-md-8 col-md-offset-2 col-xs-12">
+          <div class="col-md-10 col-md-offset-1 col-xs-12">
             <p class=>We're still rolling out our full website. In the meantime, please contact us directly.</p>
           </div>
           <div class="row">
-            <div class="col-xs-4 col-xs-offset-1 panel">
+            <div class="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1 panel">
               <address>
                 <h2 class="h3">Greg Schaefer</h2>
                 <a href="mailto:greg@indmfg.net">greg@indmfg.net</a>
               </address>
             </div>
-            <div class="col-xs-4 col-xs-offset-2 panel">
+            <div class="col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1 panel">
               <address>
                 <h2 class="h3">Jerry VanHoosen</h2>
                 <a href="mailto:jerry@indmfg.net">jerry@indmfg.net</a>
