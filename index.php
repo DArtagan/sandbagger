@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,34 +18,36 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
+    <div id="wrap" class="container-fluid top-buffer">
+      <div class="row top-buffer">
         <div class="col-xs-12">
-          <h1 class="text-center">Quick-Fill Sandbagger</h1>
+          <h1 class="text-center text-info">Quick-Fill Sandbagger</h1>
         </div>
       </div>
-      <div class="row">
+      <div class="row top-buffer">
         <div class="col-xs-12">
-          <p class="lead text-center">We have a superb product that we're eager to share with you.</p>
+          <p class="lead text-center">We have a superb product coming that we're eager to share with you.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-6 col-xs-offset-3">
-          <p>We're still rolling out our full website.  In the meantime, please contact us directly.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3 col-xs-offset-2 panel">
-          <address>
-            <h2>Greg</h2>
-            <a href="mailto:greg@indmfg.net">greg@indmfg.net</a>
-          </address>
-        </div>
-        <div class="col-xs-3 col-xs-offset-2 panel">
-          <address>
-            <h2>Jerry</h2>
-            <a href="mailto:jerry@indmfg.net">jerry@indmfg.net</a>
-          </address>
+        <div class="well top-buffer col-xs-8 col-xs-offset-2">
+          <div class="col-xs-10 col-xs-offset-1">
+            <p class=>We're still rolling out our full website. In the meantime, please contact us directly.</p>
+          </div>
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-1 panel">
+              <address>
+                <h2 class="h3">Greg Schaefer</h2>
+                <a href="mailto:greg@indmfg.net">greg@indmfg.net</a>
+              </address>
+            </div>
+            <div class="col-xs-4 col-xs-offset-2 panel">
+              <address>
+                <h2 class="h3">Jerry VanHoosen</h2>
+                <a href="mailto:jerry@indmfg.net">jerry@indmfg.net</a>
+              </address>
+            </div>
+          </div>
         </div>
       </div>
     </div>
