@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quick-Fill Sandbagger</title>
 
-    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -18,35 +17,25 @@
     <![endif]-->
   </head>
   <body>
-    <div id="wrap" class="container-fluid top-buffer">
-      <div class="row top-buffer">
-        <div class="col-xs-12">
-          <h1 class="text-center text-info">Quick-Fill Sandbagger</h1>
-        </div>
-      </div>
-      <div class="row top-buffer">
-        <div class="col-xs-12">
-          <p class="lead text-center">We have a superb product coming that we're eager to share with you.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="well top-buffer col-md-8 col-md-offset-2 col-xs-12">
-          <div class="col-md-10 col-md-offset-1 col-xs-12">
-            <p class=>We're still rolling out our full website. In the meantime, please contact us directly.</p>
+    <div id="wrap" class="container-fluid">
+      <div id="carousel-head" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-head" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-head" data-slide-to="1"></li>
+          <li data-target="#carousel-head" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="http://placekitten.com/2000/600" alt="Kitten 1">
           </div>
-          <div class="row">
-            <div class="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1 panel">
-              <address>
-                <h2 class="h3">Greg Schaefer</h2>
-                <a href="mailto:greg@indmfg.net">greg@indmfg.net</a>
-              </address>
-            </div>
-            <div class="col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1 panel">
-              <address>
-                <h2 class="h3">Jerry VanHoosen</h2>
-                <a href="mailto:jerry@indmfg.net">jerry@indmfg.net</a>
-              </address>
-            </div>
+          <div class="item">
+            <img src="http://placekitten.com/g/2000/600" alt="Kitten 2"> 
+          </div>
+          <div class="item">
+            <img src="http://placekitten.com/2002/600" alt="Kitten 3"> 
           </div>
         </div>
       </div>
