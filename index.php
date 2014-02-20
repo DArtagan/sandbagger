@@ -16,7 +16,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".nav-primary">
     <div id="wrap" class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
@@ -57,28 +57,85 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Story</a></li>
-                  <li><a href="#">Options</a></li>
-                  <li><a href="#">Purchase</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="#story">Story</a></li>
+                  <li><a href="#options">Options</a></li>
+                  <li><a href="#purchase">Purchase</a></li>
+                  <li><a href="#contact">Contact</a></li>
                 </ul>
               </div><!-- /.navbar-collapse -->
             </div>
           </header>
         </div>
       </div>
+      <div class="row buffer-bottom buffer-top">
+        <div class="col-xs-6">
+          <h2 id="story">About the Product</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis, risus a interdum imperdiet, orci erat scelerisque massa, id consequat justo felis et nulla. Curabitur ipsum tortor, ultrices id tincidunt eget, hendrerit viverra sem. Donec ut rhoncus orci. In faucibus pellentesque leo at dictum. Donec rhoncus, libero in pulvinar gravida, ante diam porttitor sem, eu tristique dolor purus iaculis metus. Vivamus blandit nisl ac mi pellentesque, vel molestie est iaculis. Suspendisse neque nibh, venenatis vitae iaculis ut, tristique ac orci. Pellentesque luctus a lorem eu ultrices. Etiam quis ullamcorper nibh, eget vestibulum neque. Duis nec semper velit. Vestibulum elementum urna nisi, aliquet eleifend libero suscipit sit amet. Pellentesque convallis lobortis massa, et ultricies erat suscipit ac.</p>
+        </div>
+        <div class="col-xs-6 dark buffer-bottom">
+          <h2>Story</h2>
+          <div class="row">
+            <div class="col-xs-8">
+              <p>Aenean condimentum massa non nisi varius porta. Quisque in metus mattis risus feugiat interdum. Vivamus adipiscing elit aliquam, tristique neque sit amet, convallis tellus. Integer libero turpis, bibendum sit amet ligula vel, interdum tempor dui. Fusce non sollicitudin augue, eget dapibus ante. Maecenas placerat dui dui. Nunc eu ullamcorper dolor. Duis aliquet auctor libero id varius.</p>
+            </div>
+            <div class="col-xs-4">
+              <img class="pull-right" src="http://placedog.com/150/200" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="options" class="row dark buffer-bottom">
+        <div class="col-xs-3">
+          <h3>Truck</h3>
+          <div>
+            <img src="http://placedog.com/200/200">
+            <p>In varius non ipsum placerat mattis. Integer fringilla congue odio. Praesent vestibulum egestas augue, vel vehicula neque tempus a.</p>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <h3>Freestanding</h3>
+          <div>
+            <img src="http://placedog.com/g/200/200">
+            <p>Nam congue, nisi eget pharetra aliquet, quam justo pretium mauris, ornare laoreet felis urna at est. Quisque auctor sem eget ultrices vulputate.</p>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <h3>Auger</h3>
+          <div>
+            <img src="http://placekitten.com/200/200">
+            <p>Nam sit amet libero hendrerit, molestie ante et, bibendum tellus. Etiam eget felis vitae sem vehicula posuere.</p>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <h3>Bags</h3>
+          <div>
+            <img src="http://placekitten.com/g/200/200">
+            <p>Fusce vehicula diam a orci molestie posuere. Cras venenatis ultrices cursus.</p>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-12">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus lorem facilisis erat mattis tempor. Nulla cursus interdum tellus, at adipiscing lorem consectetur ac. Pellentesque dignissim nec ligula ut tincidunt. Nunc sollicitudin orci interdum imperdiet dictum. Mauris imperdiet faucibus nibh. Sed pretium metus ut orci ultrices malesuada. Nunc vel felis eu neque tempus dictum. Duis eu nibh interdum felis euismod ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-          <p>In hac habitasse platea dictumst. Praesent rhoncus rutrum augue, quis tristique sem sodales in. Nam tristique at felis eget lobortis. Sed tristique accumsan euismod. Aenean a lacinia lorem. Morbi venenatis nunc pretium arcu fermentum, non pretium leo congue. Nunc commodo, ante porttitor scelerisque lacinia, lectus lorem congue turpis, et ultrices eros diam nec arcu. Donec a placerat velit. Aenean eu purus hendrerit, facilisis ipsum id, mollis dui. Donec gravida, dolor vel congue ultrices, justo sapien luctus tortor, eu feugiat risus purus sit amet magna. Proin tincidunt auctor sapien, quis pellentesque justo congue ut.</p>
-          <p>Nam hendrerit tincidunt lectus, ac lacinia urna tristique ornare. Proin dictum massa sed eros volutpat laoreet. Sed fermentum lobortis nunc non porta. Sed vitae mi et nisi rutrum vestibulum quis non lacus. Sed scelerisque, mi non ullamcorper faucibus, ante purus suscipit lectus, at iaculis nibh nisl vel velit. Ut egestas mi felis. Sed pharetra malesuada lacus, nec auctor risus cursus a. Integer fringilla nunc at consequat luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras condimentum tellus ante, vitae lacinia nunc tristique et. Aliquam at gravida nunc. Nulla quis odio auctor, dignissim massa sed, porttitor dolor. Sed luctus lectus nec tortor ullamcorper tempus.</p>
-          <p>Maecenas et sapien augue. Praesent hendrerit venenatis felis, vitae varius enim fermentum nec. Suspendisse vel dui porta, adipiscing lorem pellentesque, porta orci. Proin vestibulum augue lacus, vel vulputate mi aliquet accumsan. Donec vel sem diam. Cras enim quam, rhoncus et sagittis id, interdum non diam. Etiam a tellus vel dolor laoreet rhoncus. Sed facilisis tincidunt erat, mollis placerat orci auctor eu. Nunc et mauris et risus lobortis commodo. Sed nisi risus, pretium ac imperdiet id, convallis et odio. Praesent eleifend velit lacinia eros blandit, et volutpat metus faucibus. Pellentesque erat risus, condimentum vitae condimentum ac, laoreet quis dui. Nunc sit amet turpis sit amet nisl mollis malesuada ac et enim. Proin non massa tempus risus egestas lacinia eu et augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam elementum ultricies nisi id porta.</p>
-          <p>Suspendisse eu facilisis ipsum, auctor adipiscing sem. Mauris tempus elit erat, interdum pretium tellus dictum a. Curabitur luctus metus non vehicula sodales. Nam vel nisl eget urna venenatis dignissim. Fusce auctor tempus mi, vel sollicitudin ligula feugiat non. Maecenas condimentum dui velit, in venenatis lorem varius ut. Maecenas et massa tempor nibh volutpat sodales. Quisque sit amet justo sed felis consectetur facilisis. Suspendisse at orci nec dui blandit placerat sodales sed metus. Proin sit amet dictum quam, sit amet elementum nisl. Cras vestibulum dolor eu vulputate luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam et lobortis leo, eu tincidunt elit.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus lorem facilisis erat mattis tempor. Nulla cursus interdum tellus, at adipiscing lorem consectetur ac. Pellentesque dignissim nec ligula ut tincidunt. Nunc sollicitudin orci interdum imperdiet dictum. Mauris imperdiet faucibus nibh. Sed pretium metus ut orci ultrices malesuada. Nunc vel felis eu neque tempus dictum. Duis eu nibh interdum felis euismod ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-          <p>In hac habitasse platea dictumst. Praesent rhoncus rutrum augue, quis tristique sem sodales in. Nam tristique at felis eget lobortis. Sed tristique accumsan euismod. Aenean a lacinia lorem. Morbi venenatis nunc pretium arcu fermentum, non pretium leo congue. Nunc commodo, ante porttitor scelerisque lacinia, lectus lorem congue turpis, et ultrices eros diam nec arcu. Donec a placerat velit. Aenean eu purus hendrerit, facilisis ipsum id, mollis dui. Donec gravida, dolor vel congue ultrices, justo sapien luctus tortor, eu feugiat risus purus sit amet magna. Proin tincidunt auctor sapien, quis pellentesque justo congue ut.</p>
-          <p>Nam hendrerit tincidunt lectus, ac lacinia urna tristique ornare. Proin dictum massa sed eros volutpat laoreet. Sed fermentum lobortis nunc non porta. Sed vitae mi et nisi rutrum vestibulum quis non lacus. Sed scelerisque, mi non ullamcorper faucibus, ante purus suscipit lectus, at iaculis nibh nisl vel velit. Ut egestas mi felis. Sed pharetra malesuada lacus, nec auctor risus cursus a. Integer fringilla nunc at consequat luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras condimentum tellus ante, vitae lacinia nunc tristique et. Aliquam at gravida nunc. Nulla quis odio auctor, dignissim massa sed, porttitor dolor. Sed luctus lectus nec tortor ullamcorper tempus.</p>
-          <p>Maecenas et sapien augue. Praesent hendrerit venenatis felis, vitae varius enim fermentum nec. Suspendisse vel dui porta, adipiscing lorem pellentesque, porta orci. Proin vestibulum augue lacus, vel vulputate mi aliquet accumsan. Donec vel sem diam. Cras enim quam, rhoncus et sagittis id, interdum non diam. Etiam a tellus vel dolor laoreet rhoncus. Sed facilisis tincidunt erat, mollis placerat orci auctor eu. Nunc et mauris et risus lobortis commodo. Sed nisi risus, pretium ac imperdiet id, convallis et odio. Praesent eleifend velit lacinia eros blandit, et volutpat metus faucibus. Pellentesque erat risus, condimentum vitae condimentum ac, laoreet quis dui. Nunc sit amet turpis sit amet nisl mollis malesuada ac et enim. Proin non massa tempus risus egestas lacinia eu et augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam elementum ultricies nisi id porta.</p>
-          <p>Suspendisse eu facilisis ipsum, auctor adipiscing sem. Mauris tempus elit erat, interdum pretium tellus dictum a. Curabitur luctus metus non vehicula sodales. Nam vel nisl eget urna venenatis dignissim. Fusce auctor tempus mi, vel sollicitudin ligula feugiat non. Maecenas condimentum dui velit, in venenatis lorem varius ut. Maecenas et massa tempor nibh volutpat sodales. Quisque sit amet justo sed felis consectetur facilisis. Suspendisse at orci nec dui blandit placerat sodales sed metus. Proin sit amet dictum quam, sit amet elementum nisl. Cras vestibulum dolor eu vulputate luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam et lobortis leo, eu tincidunt elit.</p>
+          <h3 id="purchase">Purchase</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 dark buffer-bottom">
+          <h3 id="contact">Contact</h3>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
+              <address>
+                <h2 class="h3">Greg Schaefer</h2>
+                <a href="mailto:greg@indmfg.net">greg@indmfg.net</a>
+              </address>
+            </div>
+            <div class="col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1">
+              <address>
+                <h2 class="h3">Jerry VanHoosen</h2>
+                <a href="mailto:jerry@indmfg.net">jerry@indmfg.net</a>
+              </address>
+            </div>
+          </div>
         </div>
       </div>
     </div>
