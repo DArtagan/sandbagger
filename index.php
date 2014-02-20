@@ -30,14 +30,11 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-              <div class="item active">
-                <img src="http://placekitten.com/2000/400" alt="Kitten 1">
+              <div class="item active" style="background-image: url(http://placekitten.com/2000/400);">
               </div>
-              <div class="item">
-                <img src="http://placekitten.com/g/2000/400" alt="Kitten 2"> 
+              <div class="item" style="background-image: url(http://placekitten.com/g/2000/400);">
               </div>
-              <div class="item">
-                <img src="http://placekitten.com/2002/400" alt="Kitten 3"> 
+              <div class="item" style="background-image: url(http://placekitten.com/2002/400);">
               </div>
             </div>
           </div>
