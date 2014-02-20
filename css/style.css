@@ -4,14 +4,11 @@
 
 #carousel-head div.carousel-inner {
   position: relative;
-  height: 400px;
 }
 
 #carousel-head div.carousel-inner img {
-  position: absolute;
-  left: -100%;
-  right: -100%;
-  margin: 0 auto;
+  height: 400px;
+  margin: 0px auto;
   max-width: inherit;
   min-width: 100%;
 }
