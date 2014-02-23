@@ -88,7 +88,7 @@
         <div class="col-xs-3">
           <h3>Truck</h3>
           <div>
-            <img src="http://placedog.com/200/200">
+            <img src="http://placebear.com/200/200">
             <p>In varius non ipsum placerat mattis. Integer fringilla congue odio. Praesent vestibulum egestas augue, vel vehicula neque tempus a.</p>
           </div>
         </div>
@@ -102,7 +102,7 @@
         <div class="col-xs-3">
           <h3>Auger</h3>
           <div>
-            <img src="http://placekitten.com/200/200">
+            <img src="http://flickholdr.com/200/200">
             <p>Nam sit amet libero hendrerit, molestie ante et, bibendum tellus. Etiam eget felis vitae sem vehicula posuere.</p>
           </div>
         </div>
@@ -114,9 +114,45 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row buffer-bottom">
         <div class="col-xs-12">
           <h3 id="purchase">Purchase</h3>
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Auger</td>
+                    <td>$123.45</td>
+                    <td>1</td>
+                    <td>$123.45</td>
+                  </tr>
+                  <tr>
+                    <td>Bags</td>
+                    <td>$12.34</td>
+                    <td>20</td>
+                    <td>$246.80</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td>$370.25</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
