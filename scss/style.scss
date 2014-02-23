@@ -4,11 +4,11 @@
 }
 
 .buffer-top {
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 .buffer-bottom {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 #carousel-head {
@@ -38,18 +38,48 @@
   border-left: 0px;
   border-right: 0px;
   border-radius: 0px;
+  height: 50px;
   margin: auto -15px;
   width: 100%;
   z-index: 1;
+  position: absolute;
+  top: -50px;
 }
 
 #nav-primary.affix-top {
   position: absolute;
-  top: -52px;
+  top: -50px;
 }
 
 #nav-primary.affix {
   position: fixed;
   top: 0;
+  width: 100%;
+}
+
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,  
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.panel {
+  color: #333333;
+}
+
+img.responsive {
+  height: auto;
   width: 100%;
 }
