@@ -30,11 +30,11 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-              <div class="item active" style="background-image: url(http://placekitten.com/2000/400);">
+              <div class="item active" style="background-image: url(http://placekitten.com/g/2002/500);">
               </div>
-              <div class="item" style="background-image: url(http://placekitten.com/g/2000/400);">
+              <div class="item" style="background-image: url(http://placebear.com/2000/500);">
               </div>
-              <div class="item" style="background-image: url(http://placekitten.com/2002/400);">
+              <div class="item" style="background-image: url(http://placekitten.com/2000/500);">
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <header id="nav-primary" class="navbar navbar-inverse navbar-default" data-spy="affix" data-offset-top="350" role="navigation">
+          <header id="nav-primary" class="navbar navbar-inverse navbar-default" data-spy="affix" data-offset-top="450" role="navigation">
             <div class="containerfluid">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
@@ -68,45 +68,45 @@
         </div>
       </div>
       <div id="story" class="row buffer-bottom buffer-top">
-        <div class="col-xs-6">
+        <div class="col-md-6 col-xs-12 buffer-bottom">
           <h2>About the Product</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis, risus a interdum imperdiet, orci erat scelerisque massa, id consequat justo felis et nulla. Curabitur ipsum tortor, ultrices id tincidunt eget, hendrerit viverra sem. Donec ut rhoncus orci. In faucibus pellentesque leo at dictum. Donec rhoncus, libero in pulvinar gravida, ante diam porttitor sem, eu tristique dolor purus iaculis metus. Vivamus blandit nisl ac mi pellentesque, vel molestie est iaculis. Suspendisse neque nibh, venenatis vitae iaculis ut, tristique ac orci. Pellentesque luctus a lorem eu ultrices. Etiam quis ullamcorper nibh, eget vestibulum neque. Duis nec semper velit. Vestibulum elementum urna nisi, aliquet eleifend libero suscipit sit amet. Pellentesque convallis lobortis massa, et ultricies erat suscipit ac.</p>
         </div>
-        <div class="col-xs-6 dark buffer-bottom">
+        <div class="col-md-6 col-xs-12 dark buffer-bottom">
           <h2>Story</h2>
           <div class="row">
-            <div class="col-xs-8">
+            <div class="col-md-8 col-xs-10">
               <p>Aenean condimentum massa non nisi varius porta. Quisque in metus mattis risus feugiat interdum. Vivamus adipiscing elit aliquam, tristique neque sit amet, convallis tellus. Integer libero turpis, bibendum sit amet ligula vel, interdum tempor dui. Fusce non sollicitudin augue, eget dapibus ante. Maecenas placerat dui dui. Nunc eu ullamcorper dolor. Duis aliquet auctor libero id varius.</p>
             </div>
-            <div class="col-xs-4">
-              <img class="pull-right responsive" src="http://placedog.com/150/200" />
+            <div class="col-md-4 col-xs-2">
+              <img class="pull-right responsive" src="http://placebear.com/175/200" />
             </div>
           </div>
         </div>
       </div>
       <div id="products" class="row dark buffer-top buffer-bottom">
-        <div class="col-xs-3">
+        <div class="col-md-3 col-xs-6">
           <h3>Truck</h3>
           <div>
             <img class="responsive" src="http://placebear.com/200/200">
             <p>In varius non ipsum placerat mattis. Integer fringilla congue odio. Praesent vestibulum egestas augue, vel vehicula neque tempus a.</p>
           </div>
         </div>
-        <div class="col-xs-3">
+        <div class="col-md-3 col-xs-6">
           <h3>Freestanding</h3>
           <div>
             <img class="responsive" src="http://placedog.com/g/200/200">
             <p>Nam congue, nisi eget pharetra aliquet, quam justo pretium mauris, ornare laoreet felis urna at est. Quisque auctor sem eget ultrices vulputate.</p>
           </div>
         </div>
-        <div class="col-xs-3">
+        <div class="col-md-3 col-xs-6">
           <h3>Auger</h3>
           <div>
             <img class="responsive" src="http://flickholdr.com/200/200">
             <p>Nam sit amet libero hendrerit, molestie ante et, bibendum tellus. Etiam eget felis vitae sem vehicula posuere.</p>
           </div>
         </div>
-        <div class="col-xs-3">
+        <div class="col-md-3 col-xs-6">
           <h2>Bags</h2>
           <div>
             <img class="responsive" src="http://placekitten.com/g/200/200">

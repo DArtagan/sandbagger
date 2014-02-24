@@ -16,7 +16,7 @@
 }
 
 #carousel-head div.carousel-inner div {
-  height: 400px;
+  height: 500px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +34,7 @@
 }
 
 #nav-primary {
-  background: rgba(0, 0, 0, 0.9);
+  background-color: inherit;
   border-left: 0px;
   border-right: 0px;
   border-radius: 0px;
@@ -44,6 +44,10 @@
   z-index: 1;
   position: absolute;
   top: -50px;
+}
+
+#nav-primary > div {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 #nav-primary.affix-top {
