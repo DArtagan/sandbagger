@@ -16,7 +16,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body data-spy="scroll" data-target=".nav-primary">
+  <body data-spy="scroll" data-target="#main-navbar-collapse">
     <div id="wrap" class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
@@ -57,7 +57,7 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="main-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#story">Story</a></li>
+                  <li><a href="#about">About</a></li>
                   <li><a href="#products">Products</a></li>
                   <li><a href="#purchase">Purchase</a></li>
                   <li><a href="#contact">Contact</a></li>
@@ -67,20 +67,14 @@
           </header>
         </div>
       </div>
-      <div id="story" class="row buffer-bottom buffer-top">
+      <div id="about" class="row buffer-bottom buffer-top">
         <div class="col-md-6 col-xs-12 buffer-bottom">
           <h2>About the Product</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis, risus a interdum imperdiet, orci erat scelerisque massa, id consequat justo felis et nulla. Curabitur ipsum tortor, ultrices id tincidunt eget, hendrerit viverra sem. Donec ut rhoncus orci. In faucibus pellentesque leo at dictum. Donec rhoncus, libero in pulvinar gravida, ante diam porttitor sem, eu tristique dolor purus iaculis metus. Vivamus blandit nisl ac mi pellentesque, vel molestie est iaculis. Suspendisse neque nibh, venenatis vitae iaculis ut, tristique ac orci. Pellentesque luctus a lorem eu ultrices. Etiam quis ullamcorper nibh, eget vestibulum neque. Duis nec semper velit. Vestibulum elementum urna nisi, aliquet eleifend libero suscipit sit amet. Pellentesque convallis lobortis massa, et ultricies erat suscipit ac.</p>
         </div>
-        <div class="col-md-6 col-xs-12 dark buffer-bottom">
-          <h2>Story</h2>
-          <div class="row">
-            <div class="col-md-8 col-xs-10">
-              <p>Aenean condimentum massa non nisi varius porta. Quisque in metus mattis risus feugiat interdum. Vivamus adipiscing elit aliquam, tristique neque sit amet, convallis tellus. Integer libero turpis, bibendum sit amet ligula vel, interdum tempor dui. Fusce non sollicitudin augue, eget dapibus ante. Maecenas placerat dui dui. Nunc eu ullamcorper dolor. Duis aliquet auctor libero id varius.</p>
-            </div>
-            <div class="col-md-4 col-xs-2">
-              <img class="pull-right responsive" src="http://placebear.com/175/200" />
-            </div>
+        <div class="col-md-6 col-xs-12 dark buffer-bottom buffer-top">
+          <div class="Flexible-container">
+            <iframe src="//player.vimeo.com/video/38772314" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/38772314">Blank Video Placeholder (HD)</a> from <a href="http://vimeo.com/user10914821">Andrew St. Hilaire</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
           </div>
         </div>
       </div>
@@ -166,7 +160,6 @@
                 303-287-2125<br />
                 5495 East 69th Avenue<br />
                 Commerce City, CO 80022<br />
-
               </address>
             </div>
             <div class="panel col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1">
@@ -181,17 +174,13 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-4 col-xs-offset-4">
-              <address>
-                              </address>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1">
-            <!-- Responsive iFrame -->
+            <div class="col-xs-10 col-xs-offset-1">
               <div class="Flexible-container">
                 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=5495+East+69th+Avenue,+Commerce+City,+CO&amp;aq=0&amp;oq=5495+east+69th+aven&amp;sll=38.997934,-105.550567&amp;sspn=7.945941,7.89917&amp;ie=UTF8&amp;hq=&amp;hnear=5495+E+69th+Ave,+Commerce+City,+Colorado+80022&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=39.822377,-104.923774&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=5495+East+69th+Avenue,+Commerce+City,+CO&amp;aq=0&amp;oq=5495+east+69th+aven&amp;sll=38.997934,-105.550567&amp;sspn=7.945941,7.89917&amp;ie=UTF8&amp;hq=&amp;hnear=5495+E+69th+Ave,+Commerce+City,+Colorado+80022&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=39.822377,-104.923774" style="color:#0000FF;text-align:left">View Larger Map</a></small>
               </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery.js"></script>
