@@ -74,7 +74,7 @@
         </div>
         <div class="col-md-6 col-xs-12 dark buffer-bottom buffer-top">
           <div class="Flexible-container">
-            <iframe src="//player.vimeo.com/video/38772314" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/38772314">Blank Video Placeholder (HD)</a> from <a href="http://vimeo.com/user10914821">Andrew St. Hilaire</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+            <iframe src="//player.vimeo.com/video/38772314?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/38772314">Blank Video Placeholder (HD)</a> from <a href="http://vimeo.com/user10914821">Andrew St. Hilaire</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
           </div>
         </div>
       </div>
