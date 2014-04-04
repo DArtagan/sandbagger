@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           style: 'compressed',
-					compass: true,
+					compass: false,
 					// Source maps are available, but require Sass 3.3.0 to be installed
 					// https://github.com/gruntjs/grunt-contrib-sass#sourcemap
 					sourcemap: false
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
         // Browser live reloading
         // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: false
+          livereload: true
         },
         files: [
           'assets/css/main.min.css',
