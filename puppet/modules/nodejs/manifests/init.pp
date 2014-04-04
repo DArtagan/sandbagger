@@ -8,8 +8,7 @@ class nodejs
 		"clone-node-repo":
 			cwd => "/home/vagrant",
 			command => "git clone $nodeRepo node-source",
-			require => Package["git"],
-                        timeout => 0
+			require => Package["git"]
 	}
 
 	exec
@@ -17,8 +16,7 @@ class nodejs
 		"checkout-node-version":
 			cwd => "/home/vagrant/node-source",
 			command => "git checkout $nodeVersion",
-			require => [Package["git"], Exec["clone-node-repo"]],
-                        timeout => 0
+			require => [Package["git"], Exec["clone-node-repo"]]
 	}
 
 	exec
@@ -26,8 +24,7 @@ class nodejs
 		"configure-node":
 			cwd => "/home/vagrant/node-source",
 			command => "python configure",
-			require => Exec["checkout-node-version"],
-                        timeout => 0
+			require => Exec["checkout-node-version"]
 	}
 
 	exec
@@ -35,8 +32,7 @@ class nodejs
 		"make-node":
 			cwd => "/home/vagrant/node-source",
 			command => "make",
-			require => Exec["configure-node"],
-                        timeout => 0
+			require => Exec["configure-node"]
 	}
 
 	exec

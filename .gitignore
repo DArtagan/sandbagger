@@ -1,41 +1,36 @@
-documents
+# WordPress
+web/wp
+web/.htaccess
 
-# As Yeoman assumes the usage of Bower and Grunt, ignore the below:
-bower_components
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*
+!web/app/mu-plugins/.gitkeep
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+!web/app/mu-plugins/register-theme-directory.php
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
 node_modules
 
-# Ignore automatically generated cruft
-*.log
-.sass-cache
-
-# Ignore config
-local-config.php
-
-
-# Operating system files
-.Spotlight-V100
-.Trashes
-.DS_Store
-.DS_Store?
-ehthumbs.db
-Thumbs.db
-
 # Vagrant
+bin
 .vagrant
 
-# WordPress + popular plugin generated — adapted from:
-# https://github.com/github/gitignore/blob/master/WordPress.gitignore
-sitemap.xml
-sitemap.xml.gz
-content/advanced-cache.php
-content/backup-db/
-content/backups/
-content/blogs.dir/
-content/cache/
-content/index.php
-content/plugins/index.php
-content/themes/index.php
-content/uploads/
-content/upgrade/
-content/wp-cache-config.php
-
+# Sass
+**/.sass-cache/

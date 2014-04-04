@@ -21,6 +21,8 @@ class {
 	'apache':
 		mpm_module => 'prefork',
 		servername => 'localhost',
+                default_vhost => false,
+                sendfile => 'off',
 		require => Exec['apt-get update'];
 	'apache::mod::php':
 		require => Exec['apt-get update'];
@@ -28,8 +30,10 @@ class {
 apache::vhost { 
 	'localhost':
 		port    => '80',
-		docroot => '/home/vagrant/www',
+		docroot => '/home/vagrant/www/web',
+                override => 'All',
 }
+class { 'apache::mod::rewrite': }
 
 # PHP
 class {
