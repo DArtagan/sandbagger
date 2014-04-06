@@ -52,17 +52,9 @@ body { }
         z-index: 1;
     }
 
-    nav {
-        width: 100%;
-
-        & > ul {
-            float: right;
-        }
-    }
-
     .affix {
         position: fixed;
-        top: 0;
+        top: 50px;
         width: 100%;
     }
 }
