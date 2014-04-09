@@ -1,4 +1,8 @@
 <?php
+/** 
+ * Redux theme options
+ */
+ require get_template_directory() . '/lib/redux/options-init.php';
 
 /** 
  * Custom Meta Boxes
