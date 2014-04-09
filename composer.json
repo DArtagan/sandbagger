@@ -59,7 +59,9 @@
     "wordpress": "3.8.1",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "~1.0.6"
+    "vlucas/phpdotenv": "~1.0.6",
+    "wpackagist-plugin/redux-framework": "3.1.9",
+    "wpackagist-plugin/reveal-ids-for-wp-admin-25": "1.4.5"
   },
   "extra": {
     "heroku": {
