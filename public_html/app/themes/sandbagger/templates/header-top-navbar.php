@@ -3,17 +3,11 @@
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#carousel-head" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-head" data-slide-to="1"></li>
-      <li data-target="#carousel-head" data-slide-to="2"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active" style="background-image: url(http://placekitten.com/g/2002/500);">
-      </div>
-      <div class="item" style="background-image: url(http://placebear.com/2000/500);">
-      </div>
-      <div class="item" style="background-image: url(http://placekitten.com/2000/500);">
+      <div class="item active" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/background.jpg');">
       </div>
     </div>
   </div>

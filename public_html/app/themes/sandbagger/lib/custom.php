@@ -1,4 +1,11 @@
 <?php
+/** 
+ * Max upload size
+ */
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
 
 /** 
  * Custom Meta Boxes
@@ -22,15 +29,13 @@ function cmb_metaboxes( array $meta_boxes ) {
   );
 
   $fields = array(
-    array('name' => 'Order',
-          'type' => 'title',
-          'cols' => 2,
-    ),
     array('name' => 'Page',
+          'id' => 'header_page',
           'type' => 'title',
-          'cols' => 6,
+          'cols' => 8,
     ),
     array('name' => 'Style',
+          'id' => 'header_style',
           'type' => 'title',
           'cols' => 4,
     ),
@@ -40,16 +45,19 @@ function cmb_metaboxes( array $meta_boxes ) {
           'repeatable' => true,
           'fields' => array(
             array('id' => 'page',
+                  'name' => '',
                   'type' => 'select',
                   'cols' => 8,
                   'options' => $pages),
             array('id' => 'style',
+                  'name' => '',
                   'type' => 'select',
                   'cols' => 4,
                   'options' => $styles),
           ),
     ),
     array('name' => '',
+          'id' => 'description',
           'type' => 'title',
           'cols' => 12,
           'desc' => "The current page will always be on top, don't list a page more than once."

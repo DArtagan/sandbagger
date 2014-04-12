@@ -76,16 +76,18 @@ body.admin-bar .affix {
 .wrap {
     width: 100%;
 
-    main > .row {
+    .content > .row {
         padding: 30px;
         
         .section {
             @extend .container;
         }
+
+        .section:first-child .page-header {
+            display: none;
+        }
     }
 }
-
-.content { }
 
 .dark {
   background-color: #333333;
