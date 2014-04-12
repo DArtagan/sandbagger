@@ -1,6 +1,3 @@
-# Use PHP 5.3
-AddHandler application/x-httpd-php53 .php 
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
