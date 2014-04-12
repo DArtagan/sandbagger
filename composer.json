@@ -63,8 +63,8 @@
   },
   "extra": {
     "heroku": {
-        "document-root": "web",
-        "index": "web/index.php",
+        "document-root": "public_html",
+        "index": "public_html/index.php",
         "php-config": [
             "date.timezone=America/Denver",
             "display_errors=off",
@@ -72,11 +72,11 @@
         ]
     },
     "installer-paths": {
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "public_html/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public_html/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "public_html/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "webroot-dir": "web/wp",
+    "webroot-dir": "public_html/wp",
     "webroot-package": "wordpress"
   }
 }
