@@ -1,4 +1,4 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
+<header class="banner" role="banner">
   <div id="carousel-head" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div data-spy="affix" data-offset-top="450">
+  <div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="450">
     <div class="navbar-header" >
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>

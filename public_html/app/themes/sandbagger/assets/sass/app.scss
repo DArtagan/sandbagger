@@ -6,55 +6,64 @@ $bootstrap-sass-asset-helper: false;
 @import "bootstrap/bootstrap";
 
 /* ==========================================================================
+   Variables
+   ========================================================================== */
+
+$banner-height: 500px;
+$navbar-height: 50px;
+$adminbar-height: 32px;
+$adminbar-height-mobile: 46px;
+
+
+/* ==========================================================================
    Base
    ========================================================================== */
 
 body { }
 
 
-
 /* ==========================================================================
    Header
    ========================================================================== */
 
-.banner { }
-
-#carousel-head {
-    div.carousel-inner div {
-        height: 500px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    ol.carousel-indicators {
-        left: auto;
-        right: 50px;
-        top: 50px;
-        width: auto;
-    }
-
-    .carousel-indicators li {
-        display: block;
-    }
-}
-
 .banner {
-    height: 500px;
-   
-    .navbar-header, nav {
-        background: rgba(0,0,0,0.9);
-        position: relative;
-        top: -50px;
+    height: $banner-height;
+
+    #carousel-head {
+        div.carousel-inner div {
+            height: $banner-height;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ol.carousel-indicators {
+            left: auto;
+            right: 50px;
+            top: 50px;
+            width: auto;
+        }
+
+        .carousel-indicators li {
+            display: block;
+        }
     }
 
+    .navbar {
+        background: rgba(0,0,0,0.9);
+        border: none;
+        position: absolute;
+        top: $banner-height - $navbar-height;
+        width: 100%;
+    }
+   
     .navbar-header {
         z-index: 1;
     }
 
     .affix {
         position: fixed;
-        top: 50px;
+        top: 0px !important;
         width: 100%;
     }
 }
@@ -64,8 +73,30 @@ body { }
    Adminbar
    ========================================================================== */
 
-body.admin-bar .affix {
-    margin-top: 32px;
+body.admin-bar {
+    .navbar {
+        top: $banner-height - $navbar-height + $adminbar-height; 
+    }
+
+    .affix {
+        margin-top: $adminbar-height;
+    }
+
+    @media screen and (max-width: 782px) {
+        .navbar {
+            top: $banner-height - $navbar-height + $adminbar-height-mobile;
+        }
+
+        .affix  {
+            margin-top: $adminbar-height-mobile;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .affix  {
+            margin-top: 0px;
+        }
+    }
 }
 
 
