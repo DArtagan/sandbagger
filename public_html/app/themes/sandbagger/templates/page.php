@@ -1,14 +1,5 @@
-<?php
-$post_meta = get_post_meta( get_the_id(), 'include_pages', false);
-$group_data = array();
-if ($post_meta) {
-  foreach ($post_meta as $data) {
-    $group_data[$data['page']] = $data['style'];
-  }
-}
-
-while (have_posts()) : the_post(); ?>
-  <div class="row <?php if ($group_data[$post->ID]) { echo $group_data[$post->ID]; }; ?>">
+<?php while (have_posts()) : the_post(); ?>
+  <div class="row">
     <div class="section">
       <div class="page-header">
         <h1>
@@ -16,7 +7,6 @@ while (have_posts()) : the_post(); ?>
         </h1>
       </div>
       <?php the_content(); ?>
-      <?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
     </div>
   </div>
 <?php endwhile; ?>

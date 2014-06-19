@@ -76,14 +76,45 @@ function cmb_metaboxes( array $meta_boxes ) {
   return $meta_boxes; 
 }
 
+/** 
+ * Get ID by pagename
+ */
+function get_ID_by_pagename($page_name) {
+   global $wpdb;
+   $page_name_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".mysql_real_escape_string($page_name)."' AND post_type = 'page'");
+   return $page_name_id;
+}
+
 
 /** 
  * Concatenate Pages
  */
 add_action('pre_get_posts', 'concatenate_pages');
 
-function concatenate_pages( &$wp_query ) {
-  if ($wp_query->is_main_query()) {
-      $wp_query->set('page_id', '');
+function concatenate_pages( $query ) {
+  if ($query->is_page() && $query->is_main_query()) {
+    $current_id = $query->query_vars['page_id'];
+    if ($current_id == 0) {
+      $current_id = get_ID_by_pagename($query->query_vars['pagename']);
+    }
+
+    $pages = get_post_meta( $current_id, 'include_pages', false );
+
+    if ($pages) {
+      $id_list = array($current_id);
+
+      foreach ($pages as $page) {
+        array_push($id_list, $page['page']);
+      }
+
+      $query-> set('post_type', 'page');
+      $query-> set('post__in', $id_list);
+      $query-> set('orderby', 'post__in');
+      $query-> set('p', null);
+      $query-> set('pagename', null);
+      $query-> set('page_id', null);
+   
+      remove_all_actions ( '__after_loop');
+    }
   }
 }
