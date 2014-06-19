@@ -1,6 +1,6 @@
 # WordPress
-web/wp
-web/.htaccess
+public_html/wp
+public_html/.htaccess/
 
 # WP-CLI
 db-sync
