@@ -80,16 +80,10 @@ function cmb_metaboxes( array $meta_boxes ) {
 /** 
  * Concatenate Pages
  */
-add_action( 'pre_get_posts', 'concatenate_pages' );
+add_action('pre_get_posts', 'concatenate_pages');
 
 function concatenate_pages( &$wp_query ) {
-  if ($wp_query->is_main_query() && get_post() != NULL && get_post_meta( get_the_id(), 'include_pages', false)) {
-    $group_data = get_post_meta( get_the_id(), 'include_pages', false);
-
-    foreach ($group_data as $data) {
-      array_push($ids, $data->page);
-    }
-
-    $wp_query->set('page_id', $ids);
+  if ($wp_query->is_main_query()) {
+      $wp_query->set('page_id', '');
   }
 }

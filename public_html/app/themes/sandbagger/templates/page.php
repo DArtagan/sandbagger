@@ -1,5 +1,6 @@
 <?php
 $post_meta = get_post_meta( get_the_id(), 'include_pages', false);
+$group_data = array();
 if ($post_meta) {
   foreach ($post_meta as $data) {
     $group_data[$data['page']] = $data['style'];
