@@ -8,14 +8,10 @@ if ($post_meta) {
 }
 
 while (have_posts()) : the_post(); ?>
-  <div class="row <?php if ($group_data[$post->ID]) { echo $group_data[$post->ID]; }; ?>">
-    <div class="section">
-      <div class="page-header">
-        <h1>
-          <?php the_title(); ?>
-        </h1>
-      </div>
-      <?php the_content(); ?>
-    </div>
+<div id="<?php echo 'qf_' . sanitize_title($post->post_title); ?>" class="row section <?php if (array_key_exists($post->ID, $group_data)) { echo $group_data[$post->ID]; }; ?>">
+    <h1>
+      <?php the_title(); ?>
+    </h1>
+    <?php the_content(); ?>
   </div>
 <?php endwhile; ?>

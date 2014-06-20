@@ -107,16 +107,8 @@ body.admin-bar {
 .wrap {
     width: 100%;
 
-    .content > .row {
-        padding: 30px;
-        
-        .section {
-            @extend .container;
-        }
-
-        .section:first-child .page-header {
-            display: none;
-        }
+    .section {
+        padding: 70px;
     }
 }
 

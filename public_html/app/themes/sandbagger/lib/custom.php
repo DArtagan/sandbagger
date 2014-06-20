@@ -12,9 +12,9 @@
  */
 require_once( get_template_directory() . '/lib/Custom-Meta-Boxes/custom-meta-boxes.php' );
 
-add_filter( 'cmb_meta_boxes', 'cmb_metaboxes' );
+add_filter( 'cmb_meta_boxes', 'qf_metaboxes' );
 
-function cmb_metaboxes( array $meta_boxes ) {
+function qf_metaboxes( array $meta_boxes ) {
   
   $page_list = get_pages( array() );
   $pages = array();
@@ -62,7 +62,11 @@ function cmb_metaboxes( array $meta_boxes ) {
           'cols' => 12,
           'desc' => "The current page will always be on top, don't list a page more than once."
     ),
-
+    array('name' => 'Concatenated Navbar',
+          'id' => 'concatenated_nav',
+          'type' => 'checkbox',
+          'desc' => 'Override the main navbar to include listings for this page.'
+    ),
   );
 
   $meta_boxes[] = array(
@@ -76,10 +80,11 @@ function cmb_metaboxes( array $meta_boxes ) {
   return $meta_boxes; 
 }
 
+
 /** 
  * Get ID by pagename
  */
-function get_ID_by_pagename($page_name) {
+function qf_get_ID_by_pagename($page_name) {
    global $wpdb;
    $page_name_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".mysql_real_escape_string($page_name)."' AND post_type = 'page'");
    return $page_name_id;
@@ -89,9 +94,9 @@ function get_ID_by_pagename($page_name) {
 /** 
  * Concatenate Pages
  */
-add_action('pre_get_posts', 'concatenate_pages');
+add_action('pre_get_posts', 'qf_concatenate_pages');
 
-function concatenate_pages( $query ) {
+function qf_concatenate_pages( $query ) {
   if ($query->is_page() && $query->is_main_query()) {
     $current_id = $query->query_vars['page_id'];
     if ($current_id == 0) {
@@ -116,5 +121,44 @@ function concatenate_pages( $query ) {
    
       remove_all_actions ( '__after_loop');
     }
+  }
+}
+
+
+/** 
+ * Navbar based on concatenated pages
+ */
+class QF_Concatenated_Roots_Nav_walker extends Roots_Nav_Walker {
+  var $local_pages = array();
+
+  function __construct($id = 0){
+		$this->menu_id = $id;
+		$this->menu_items[] = $id;
+    foreach (get_post_meta( $id, 'include_pages', false ) as $page) {
+      array_push($this->local_pages, $page['page']);
+	  }
+  }
+
+  function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+    $item_html = '';
+    parent::start_el($item_html, $item, $depth, $args);
+    
+    if ($item->is_dropdown && ($depth === 0)) {
+      $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
+      $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
+    }
+    elseif (stristr($item_html, 'li class="divider')) {
+      $item_html = preg_replace('/<a[^>]*>.*?<\/a>/iU', '', $item_html);
+    }
+    elseif (stristr($item_html, 'li class="dropdown-header')) {
+      $item_html = preg_replace('/<a[^>]*>(.*)<\/a>/iU', '$1', $item_html);
+    }
+    
+    if (in_array($item->object_id, $this->local_pages)) {
+      $item_html = preg_replace('/(?<=href=")(.*)(?=")/iU', '#qf_' . sanitize_title($item->title), $item_html);
+    }
+
+    $item_html = apply_filters('roots_wp_nav_menu_item', $item_html);
+    $output .= $item_html;
   }
 }

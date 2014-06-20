@@ -24,9 +24,13 @@
 
     <nav class="collapse navbar-collapse" role="navigation">
       <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-        endif;
+        if (has_nav_menu('primary_navigation')) {
+          if (get_post_meta($post->ID, 'concatenated_nav', true)) {
+            wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'menu' => 'header-menu', 'walker' => new QF_Concatenated_Roots_Nav_Walker($post->ID)));
+          } else {
+            wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+          }
+        }
       ?>
     </nav>
   </div>
