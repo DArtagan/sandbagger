@@ -88,6 +88,7 @@ module.exports = function(grunt) {
           'assets/css/main.min.css',
           'assets/js/scripts.min.js',
           'lib/custom.php',
+          'lib/redux.php',
           'templates/*.php',
           '*.php'
         ]
