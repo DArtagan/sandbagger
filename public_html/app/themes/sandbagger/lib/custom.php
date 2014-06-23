@@ -105,7 +105,7 @@ function qf_concatenate_pages( $query ) {
   if ($query->is_page() && $query->is_main_query()) {
     $current_id = $query->query_vars['page_id'];
     if ($current_id == 0) {
-      $current_id = get_ID_by_pagename($query->query_vars['pagename']);
+      $current_id = qf_get_ID_by_pagename($query->query_vars['pagename']);
     }
 
     $pages = get_post_meta( $current_id, 'include_pages', false );

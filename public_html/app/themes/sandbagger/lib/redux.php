@@ -46,12 +46,17 @@
             // ACTUAL DECLARATION OF SECTIONS
             $this->sections[] = array(
                 'title'     => __('Home Settings', 'redux-framework'),
-                'desc'      => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'redux-framework'),
+                'desc'      => __('', 'redux-framework'),
                 'icon'      => 'el-icon-home',
                 // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                 'fields'    => array(
-
-                )
+                    array(
+                      'id' => 'banner',
+                      'type' => 'gallery',
+                      'tiles' => true,
+                      'title' => __('Banner Images', 'redux_framework'),
+                    ),
+                ),
             );
         }
 
@@ -79,7 +84,7 @@
                 'page_title'        => __('Sandbagger Options', 'redux-framework'),
                 
                 'async_typography'  => false,                    // Use a asynchronous font on the front end or font string
-                'admin_bar'         => true,                    // Show the panel pages on the admin bar
+                'admin_bar'         => false,                    // Show the panel pages on the admin bar
                 'global_variable'   => '',                      // Set a different name for your global variable other than the opt_name
                 'dev_mode'          => false,                    // Show the time the page took to load, etc
                 'customizer'        => true,                    // Enable basic customizer support

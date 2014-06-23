@@ -1,13 +1,12 @@
 <header class="banner" role="banner">
   <div id="carousel-head" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-head" data-slide-to="0" class="active"></li>
-    </ol>
-
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/background.jpg');">
+      <?php global $redux_options; 
+        $banners = explode(',',$redux_options['banner']);
+        foreach ($banners as $banner) : ?>
+        <div class="item <?php if ($banner === reset($banners)) echo 'active'; ?>" style="background-image: url('<?php echo wp_get_attachment_url($banner); ?>');"></div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
