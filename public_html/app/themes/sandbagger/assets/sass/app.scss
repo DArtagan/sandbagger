@@ -4,6 +4,7 @@
 
 $bootstrap-sass-asset-helper: false;
 @import "bootstrap/bootstrap";
+@import "bootstrap/mixins";
 
 /* ==========================================================================
    Variables
@@ -58,6 +59,13 @@ body { }
    
         .navbar-header {
             z-index: 1;
+        }
+
+        div.mobile-cart a {
+            @extend .btn, .btn-default;
+            @extend .visible-xs;
+            float: right;
+            margin: 8px 15px;
         }
     }
 
