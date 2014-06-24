@@ -42,7 +42,7 @@
       "type": "package",
       "package": {
         "name": "wordpress",
-        "version": "3.8.1",
+        "version": "3.9.1",
         "type": "webroot",
         "dist": {
           "type": "zip",
