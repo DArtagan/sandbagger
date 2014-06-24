@@ -14,6 +14,8 @@ if (file_exists($root_dir . '/.env')) {
  * Set up our global environment constant and load its config first
  * Default: development
  */
+define( 'WP_MEMORY_LIMIT', '64M' );
+
 define('WP_ENV', getenv('WP_ENV') ? getenv('WP_ENV') : 'development');
 
 $env_config = dirname(__FILE__) . '/environments/' . WP_ENV . '.php';

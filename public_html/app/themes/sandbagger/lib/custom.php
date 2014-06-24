@@ -86,6 +86,23 @@ function qf_metaboxes( array $meta_boxes ) {
 }
 
 
+/**
+ * Register our sidebars and widgetized areas.
+ */
+add_action( 'widgets_init', 'qf_widgets_init' );
+
+function qf_widgets_init() {
+	register_sidebar( array(
+		'name' => 'Navbar right',
+    'id' => 'qf_navbar_right',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+}
+
+
 /** 
  * Get ID by pagename
  */

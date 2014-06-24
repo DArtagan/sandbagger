@@ -55,10 +55,10 @@ body { }
         position: absolute;
         top: $banner-height - $navbar-height;
         width: 100%;
-    }
    
-    .navbar-header {
-        z-index: 1;
+        .navbar-header {
+            z-index: 1;
+        }
     }
 
     .affix {

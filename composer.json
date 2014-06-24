@@ -61,7 +61,8 @@
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
     "wpackagist-plugin/redux-framework": "3.1.9",
-    "wpackagist-plugin/reveal-ids-for-wp-admin-25": "1.4.5"
+    "wpackagist-plugin/reveal-ids-for-wp-admin-25": "1.4.5",
+    "wpackagist-plugin/woocommerce": ">=2.1.11"
   },
   "extra": {
     "heroku": {

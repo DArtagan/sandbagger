@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e2a357de2bcf71f560d6089bdfe3cf2f",
+    "hash": "36d21342975178251abe7fb6fe3f332a",
     "packages": [
         {
             "name": "composer/installers",
@@ -236,6 +236,29 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/reveal-ids-for-wp-admin-25/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce",
+            "version": "2.1.11",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/woocommerce/",
+                "reference": "tags/2.1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/woocommerce.2.1.11.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/woocommerce": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/woocommerce/"
         }
     ],
     "packages-dev": [],

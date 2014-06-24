@@ -10,13 +10,17 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="450">
+  <div class="navbar navbar-default navbar-static-top container-fluid" data-spy="affix" data-offset-top="450">
     <div class="navbar-header" >
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+      </button>
+      <button class="navbar-toggle" data-toggle="collapse"><?php if (is_active_sidebar('qf_navbar_right')) : ?>
+        <?php dynamic_sidebar( 'qf_navbar_right' ); ?>
+      <?php endif; ?>
       </button>
       <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
     </div>
@@ -31,6 +35,13 @@
           }
         }
       ?>
+      <?php if (is_active_sidebar('qf_navbar_right')) : ?>
+        <ul id="qf_nav_right" class="nav navbar-nav navbar-right">
+          <li>
+            <?php dynamic_sidebar( 'qf_navbar_right' ); ?>
+          </li>
+        </ul>
+      <?php endif; ?>
     </nav>
   </div>
 </header>
