@@ -10,10 +10,12 @@ $bootstrap-sass-asset-helper: false;
    Variables
    ========================================================================== */
 
-$banner-height: 500px;
+$banner-height: 450px;
 $navbar-height: 50px;
 $adminbar-height: 32px;
 $adminbar-height-mobile: 46px;
+
+$brand-color: #ff4d1b;
 
 
 /* ==========================================================================
@@ -37,23 +39,12 @@ body { }
             background-repeat: no-repeat;
             background-size: cover;
         }
-
-        ol.carousel-indicators {
-            left: auto;
-            right: 50px;
-            top: 50px;
-            width: auto;
-        }
-
-        .carousel-indicators li {
-            display: block;
-        }
     }
 
     .navbar {
         background: rgba(0,0,0,0.9);
         border: none;
-        border-bottom: 5px solid #ff4d1b;
+        border-bottom: 5px solid $brand-color;
         position: absolute;
         top: $banner-height - $navbar-height;
         width: 100%;
@@ -63,7 +54,7 @@ body { }
             border-right: 4px solid #555555;
 
             span.brand {
-                color: #ff4d1b;
+                color: $brand-color;
                 font-weight: bold;
             }
         }
