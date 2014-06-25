@@ -62,7 +62,8 @@
     "vlucas/phpdotenv": "~1.0.6",
     "wpackagist-plugin/redux-framework": "3.1.9",
     "wpackagist-plugin/reveal-ids-for-wp-admin-25": "1.4.5",
-    "wpackagist-plugin/woocommerce": ">=2.1.11"
+    "wpackagist-plugin/woocommerce": ">=2.1.11",
+    "wpackagist-plugin/jetpack": ">=3.0.2"
   },
   "extra": {
     "heroku": {
