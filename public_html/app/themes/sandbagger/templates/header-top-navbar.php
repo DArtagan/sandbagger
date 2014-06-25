@@ -23,7 +23,7 @@
           <?php dynamic_sidebar( 'qf_navbar_right' ); ?>
         <?php endif; ?>
       </div>
-      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><span class="brand"><?php bloginfo('name'); ?></span> <?php bloginfo('description'); ?></a>
+      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><span class="brand"><?php bloginfo('name'); ?></span><span class="tagline hidden-xs"> <?php bloginfo('description'); ?></span></a>
     </div>
 
     <nav class="collapse navbar-collapse nav-primary" role="navigation">
