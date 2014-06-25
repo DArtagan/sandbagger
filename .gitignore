@@ -15,6 +15,7 @@ sql-dump-*.sql
 
 # Application
 public_html/app/plugins/*
+!public_html/app/plugins/cart-widget
 !public_html/app/plugins/.gitkeep
 public_html/app/mu-plugins/*
 !public_html/app/mu-plugins/.gitkeep
