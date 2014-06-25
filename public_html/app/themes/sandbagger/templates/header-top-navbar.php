@@ -23,10 +23,13 @@
           <?php dynamic_sidebar( 'qf_navbar_right' ); ?>
         <?php endif; ?>
       </div>
-      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><span class="brand"><?php bloginfo('name'); ?></span> <?php bloginfo('description'); ?></a>
     </div>
 
-    <nav class="collapse navbar-collapse" role="navigation">
+    <nav class="collapse navbar-collapse nav-primary" role="navigation">
+      <ul class="nav hidden">
+        <li><a href="#qf_home"></a></li>
+      </ul>
       <?php
         if (has_nav_menu('primary_navigation')) {
           if ($post && get_post_meta($post->ID, 'concatenated_nav', true)) {

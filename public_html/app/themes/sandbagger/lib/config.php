@@ -18,8 +18,10 @@ define('POST_EXCERPT_LENGTH', 40); // Length in words for excerpt_length filter 
  * .main classes
  */
 function roots_main_class() {
-  if (roots_display_sidebar()) {
+  // if (roots_display_sidebar()) {
+  if (False) { // Disabling the sidebar completely
     // Classes on pages with the sidebar
+    // $class = 'col-sm-8';  # Disabling the sidebar entirely
     $class = 'col-sm-8';
   } else {
     // Classes on full width pages
@@ -54,7 +56,6 @@ function roots_display_sidebar() {
      * The second element must be an array even if there's only 1 argument.
      */
     array(
-      'is_page',
       'is_404',
       'is_front_page'
     ),

@@ -1,5 +1,5 @@
 <?php get_template_part('templates/head'); ?>
-<body <?php body_class(); ?> role="document">
+<body <?php body_class(); ?> role="document" data-spy="scroll" data-target=".nav-primary">
 
   <!--[if lt IE 8]>
     <div class="alert alert-warning">
@@ -17,9 +17,8 @@
     }
   ?>
 
-  <div class="wrap container" role="document">
-    <div class="row">
-      <main class="content container <?php echo roots_main_class(); ?>" role="main">
+  <div class="wrap" role="document">
+      <main class="content container-fluid <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.content -->
       <?php if (roots_display_sidebar()) : ?>
@@ -27,7 +26,6 @@
           <?php include roots_sidebar_path(); ?>
         </aside><!-- /.sidebar -->
       <?php endif; ?>
-    </div>
   </div>
 
   <?php get_template_part('templates/footer'); ?>

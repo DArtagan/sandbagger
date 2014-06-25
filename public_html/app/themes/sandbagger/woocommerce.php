@@ -1,3 +1,5 @@
 <div class="row section">
-  <?php woocommerce_content(); ?>
+  <div class="container">
+    <?php woocommerce_content(); ?>
+  </div>
 </div>

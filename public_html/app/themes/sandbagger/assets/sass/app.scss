@@ -53,12 +53,28 @@ body { }
     .navbar {
         background: rgba(0,0,0,0.9);
         border: none;
+        border-bottom: 5px solid #ff4d1b;
         position: absolute;
         top: $banner-height - $navbar-height;
         width: 100%;
    
+        .navbar-brand {
+            background: #fff;
+            border-right: 4px solid #555555;
+
+            span.brand {
+                color: #ff4d1b;
+                font-weight: bold;
+            }
+        }
+
         .navbar-header {
             z-index: 1;
+        }
+
+        .navbar-nav {
+            font-size: 1.1em;
+            font-weight: bold;
         }
 
         div.mobile-cart a {
