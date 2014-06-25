@@ -97,6 +97,10 @@ body { }
    Adminbar
    ========================================================================== */
 
+html #wpadminbar {
+    z-index: 1000 !important;
+}
+
 body.admin-bar {
     .navbar {
         top: $banner-height - $navbar-height + $adminbar-height; 
