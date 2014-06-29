@@ -9,6 +9,7 @@
  * 1. jquery-1.11.0.min.js via Google CDN
  * 2. /theme/assets/js/vendor/modernizr-2.7.0.min.js
  * 3. /theme/assets/js/main.min.js (in footer)
+ * 4. /theme/assets/js/trigger-fitvids.js
  */
 function roots_scripts() {
   wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '4cd6d49a4894af2f709cdc4a8c6fbd39');
@@ -28,9 +29,13 @@ function roots_scripts() {
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
   wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '0fc6af96786d8f267c8686338a34cd38', true);
+  wp_register_script('fitvids', get_template_directory_uri() . '/assets/js/fitvids.js', array('jquery'), '', true);
+  wp_register_script('trigger-fitvids', get_template_directory_uri() . '/assets/js/trigger-fitvids.js', array('fitvids'), '', true);
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');
   wp_enqueue_script('roots_scripts');
+  wp_enqueue_script('fitvids');
+  wp_enqueue_script('trigger-fitvids');
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 
