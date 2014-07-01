@@ -7,10 +7,35 @@
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
 
+
+/**
+ * WooCommerce support declaration
+ */
+add_theme_support( 'woocommerce' ); 
+
+
 /**
  * Redux config load
  */
  require_once ( get_template_directory() . '/lib/redux.php');
+
+
+/**
+ * Register our sidebars and widgetized areas.
+ */
+add_action( 'widgets_init', 'qf_widgets_init' );
+
+function qf_widgets_init() {
+	register_sidebar( array(
+		'name' => 'Navbar right',
+    'id' => 'qf_navbar_right',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+}
+
 
 /** 
  * Custom Meta Boxes
@@ -83,23 +108,6 @@ function qf_metaboxes( array $meta_boxes ) {
   );
 
   return $meta_boxes; 
-}
-
-
-/**
- * Register our sidebars and widgetized areas.
- */
-add_action( 'widgets_init', 'qf_widgets_init' );
-
-function qf_widgets_init() {
-	register_sidebar( array(
-		'name' => 'Navbar right',
-    'id' => 'qf_navbar_right',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
-	) );
 }
 
 
