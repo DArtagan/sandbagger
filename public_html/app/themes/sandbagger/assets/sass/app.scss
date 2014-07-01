@@ -128,10 +128,24 @@ body.admin-bar {
 
     .section {
         padding: 70px;
+
+        #qf_home h1 {
+            display: none;
+        }
+    }
+
+    .embed-gdrive-video {
+        margin-bottom: 25px; 
     }
 
     .woocommerce ul.products li.product {
         margin-right: 2.5%;
+
+        h3 {
+            color: #cccccc;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
     }
 }
 
