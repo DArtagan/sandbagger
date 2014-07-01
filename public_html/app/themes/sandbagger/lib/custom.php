@@ -18,6 +18,7 @@ add_theme_support( 'woocommerce' );
  * Redux config load
  */
  require_once ( get_template_directory() . '/lib/redux.php');
+ remove_action( 'admin_notices', 'woothemes_updater_notice' );
 
 
 /**
