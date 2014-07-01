@@ -12,13 +12,13 @@
  * WooCommerce support declaration
  */
 add_theme_support( 'woocommerce' ); 
+remove_action( 'admin_notices', 'woothemes_updater_notice' );
 
 
 /**
  * Redux config load
  */
  require_once ( get_template_directory() . '/lib/redux.php');
- remove_action( 'admin_notices', 'woothemes_updater_notice' );
 
 
 /**
@@ -35,6 +35,17 @@ function qf_widgets_init() {
 		'before_title' => '',
 		'after_title' => '',
 	) );
+}
+
+
+/*
+ * Remove tab from WooCommerce product details page
+ */
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+function woo_remove_product_tabs( $tabs ) {
+  unset( $tabs['additional_information'] ); // Remove the additional information tab
+  return $tabs;
 }
 
 
