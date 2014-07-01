@@ -12,7 +12,7 @@
  * 4. /theme/assets/js/trigger-fitvids.js
  */
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'e38b948c9b485512d31e1e85304ceada');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'dfc909cd81c21fe4f631a4e0f04aad07');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline

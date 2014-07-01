@@ -129,9 +129,10 @@ body.admin-bar {
     .section {
         padding: 70px;
 
-        #qf_home h2 {
-            display: none;
-        }
+    }
+
+    #qf_home h1 {
+        display: none;
     }
 
     .embed-gdrive-video {
