@@ -140,8 +140,7 @@ body.admin-bar {
         margin-bottom: 25px; 
     }
 
-    div.qf_shop {
-        @extend .container;
+    #qf_shop {
 
         .woocommerce {
             @extend .row;
