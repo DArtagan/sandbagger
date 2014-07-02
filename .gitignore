@@ -17,6 +17,7 @@ sql-dump-*.sql
 public_html/app/plugins/*
 !public_html/app/plugins/cart-widget
 !public_html/app/plugins/.gitkeep
+!public_html/app/plugins/woocommerce-gateway-stripe
 public_html/app/mu-plugins/*
 !public_html/app/mu-plugins/.gitkeep
 public_html/app/upgrade
