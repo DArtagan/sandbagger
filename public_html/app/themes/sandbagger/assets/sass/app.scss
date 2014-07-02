@@ -41,13 +41,14 @@ body { }
         }
     }
 
-    .navbar {
+    & > .navbar {
         background: rgba(0,0,0,0.9);
         border: none;
         border-bottom: 5px solid $brand-color;
         position: absolute;
         top: $banner-height - $navbar-height;
         width: 100%;
+        z-index: 1001;
    
         .navbar-brand {
             background: #fff;
@@ -89,7 +90,7 @@ body { }
    ========================================================================== */
 
 html #wpadminbar {
-    z-index: 1000 !important;
+    z-index: 1002 !important;
 }
 
 body.admin-bar {
@@ -127,8 +128,8 @@ body.admin-bar {
     width: 100%;
 
     .section {
-        padding: 70px;
-
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 
     #qf_home h1 {
@@ -139,15 +140,36 @@ body.admin-bar {
         margin-bottom: 25px; 
     }
 
-    .woocommerce ul.products li.product {
-        margin-right: 2.5%;
+    div.qf_shop {
+        @extend .container;
 
-        h3 {
-            color: #cccccc;
-            font-size: 1.3em;
-            font-weight: bold;
+        .woocommerce {
+            @extend .row;
+
+            ul.products li.product {
+            @extend .col-xs-12;
+            @extend .col-sm-6;
+            @extend .col-md-4;
+            margin: inherit;
+
+                h3 {
+                    color: #cccccc;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                }
+
+
+                a.button.added:before {
+                    content: none;
+                }
+
+                a.added_to_cart {
+                    padding-left: 15px;
+                }
+            }
         }
     }
+
 }
 
 .dark {
@@ -192,7 +214,13 @@ body.admin-bar {
    Footer
    ========================================================================== */
 
-.content-info { }
+.content-info {
+    clear: both;
+    
+    .footer_menu {
+        text-align: right;
+    }
+}
 
 
 

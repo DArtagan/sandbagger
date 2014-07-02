@@ -22,7 +22,7 @@ remove_action( 'admin_notices', 'woothemes_updater_notice' );
 
 
 /**
- * Register our sidebars and widgetized areas.
+ * Register our menus, sidebars and widgetized areas.
  */
 add_action( 'widgets_init', 'qf_widgets_init' );
 
@@ -36,6 +36,22 @@ function qf_widgets_init() {
 		'after_title' => '',
 	) );
 }
+
+register_nav_menu( 'qf_footer', 'Footer');
+
+
+/**
+ * Log in/out for footer location
+ */
+function qf_footer_add_login_logout_link( $items, $args  ) {
+  if( $args->theme_location == 'qf_footer' ) {
+          $loginoutlink = wp_loginout('index.php', false);
+          $items .= '<li">'. $loginoutlink .'</li>';
+      return $items;
+      }
+      return $items;
+}
+add_filter( 'wp_nav_menu_items', 'qf_footer_add_login_logout_link', 10, 2 );
 
 
 /*
