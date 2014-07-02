@@ -33,7 +33,7 @@ class Cart_Widget extends WP_Widget {
 
 		echo $args['before_widget'];
     echo $args['before_title']; ?>
-    <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><span class="glyphicon glyphicon-shopping-cart"></span><?php if (!empty($title)) echo $title; ?><span class="cart_count"> <?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></span></a>
+    <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;<?php if (!empty($title)) echo $title; ?><span class="cart_count"> <?php echo sprintf('%d', $woocommerce->cart->cart_contents_count);?></span></a>
     <?php echo $args['after_title'];
     echo $args['after_widget'];
  
@@ -83,12 +83,11 @@ add_filter('add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
  
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
   global $woocommerce;
-  ob_start();?>
+  ob_start(); ?>
   
-  <?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>
+    <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;<?php if (!empty($title)) echo $title; ?><span class="cart_count"> <?php echo sprintf('%d', $woocommerce->cart->cart_contents_count);?></span></a>
   
-  <?php
-  $fragments['span.cart_count'] = ob_get_clean();
+  <?php $fragments['a.cart-contents'] = ob_get_clean();
   return $fragments;
 }
 
