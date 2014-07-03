@@ -55,12 +55,13 @@ add_filter( 'wp_nav_menu_items', 'qf_footer_add_login_logout_link', 10, 2 );
 
 
 /*
- * Remove tab from WooCommerce product details page
+ * Edit tabs on WooCommerce product details page
  */
-add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+add_filter( 'woocommerce_product_tabs', 'woo_edit_product_tabs', 98 );
 
-function woo_remove_product_tabs( $tabs ) {
+function woo_edit_product_tabs( $tabs ) {
   unset( $tabs['additional_information'] ); // Remove the additional information tab
+  $tabs['reviews']['title'] = __('Testimonials');
   return $tabs;
 }
 
