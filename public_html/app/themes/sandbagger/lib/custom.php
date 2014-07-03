@@ -45,7 +45,7 @@ register_nav_menu( 'qf_footer', 'Footer');
  */
 function qf_footer_add_login_logout_link( $items, $args  ) {
   if( $args->theme_location == 'qf_footer' ) {
-          $loginoutlink = wp_loginout('index.php', false);
+          $loginoutlink = wp_loginout(null, false);
           $items .= '<li">'. $loginoutlink .'</li>';
       return $items;
       }
