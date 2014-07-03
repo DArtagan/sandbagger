@@ -18,7 +18,7 @@
   ?>
 
   <div class="wrap" role="document">
-      <main class="content container-fluid <?php echo roots_main_class(); ?>" role="main">
+      <main class="content container-fluid" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.content -->
       <?php if (roots_display_sidebar()) : ?>

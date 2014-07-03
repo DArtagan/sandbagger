@@ -9,7 +9,7 @@ if ($post_meta) {
 
 while (have_posts()) : the_post(); ?>
   <div id="<?php echo 'qf_' . sanitize_title($post->post_title); ?>" class="row section <?php if (array_key_exists($post->ID, $group_data)) { echo $group_data[$post->ID]; }; ?>">
-    <div class="col-xs-12 container">
+    <div class="container">
       <h1>
         <?php the_title(); ?>
       </h1>
